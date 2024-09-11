@@ -1,12 +1,15 @@
-import "./App.css";
-import Navigation from "./Auth/Navigation";
+import { Outlet } from "react-router-dom";
+import Navigation from "./pages/Navigation.jsx";
 
-function App() {
+const App = () => {
   return (
     <>
-      <Navigation />
+      <main className="flex">
+        <Navigation />
+        <Outlet />
+      </main>
     </>
   );
-}
+};
 
 export default App;
